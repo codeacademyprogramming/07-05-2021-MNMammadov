@@ -12,7 +12,7 @@
 
 <body>
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="loansModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -33,22 +33,12 @@
                                 <th scope="col">Start and end dates</th>
                             </tr>
                         </thead>
-                        <tbody class="loan-table-body">
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Jesus Myers</td>
-                                <td>Mehdi</td>
-                                <td>4500 AZN</td>
-                                <td>4500 AZN</td>
-                                <td>4500 AZN</td>
-                                <td>4500 AZN</td>
-                            </tr>
+                        <tbody id="loans-table-body">
                         </tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
                 </div>
             </div>
         </div>
@@ -60,14 +50,13 @@
             <div class="container-fluid">
                 <form class="d-flex">
                     <div class="input-group me-3">
-                        <input type="text" class="form-control" placeholder="Customer name" aria-label="Customer name"
-                            aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                        <input id="search-customer" type="text" class="form-control" placeholder="Customer name"
+                            aria-label="Customer name" aria-describedby="button-addon2">
                     </div>
-                    <select class="form-select form-select-sm" aria-label="Filter">
-                        <option selected>All</option>
-                        <option>Active loans</option>
-                        <option>Non-active loans</option>
+                    <select id="loan-status-filter" class="form-select form-select-sm" aria-label="Filter">
+                        <option value="all" selected>All</option>
+                        <option value="active">Active loans</option>
+                        <option value="non-active">Non-active loans</option>
                     </select>
                 </form>
             </div>
