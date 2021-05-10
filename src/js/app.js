@@ -3,7 +3,7 @@ const loansModal = new bootstrap.Modal(document.getElementById('loansModal'));
 
 
 // https://stackoverflow.com/questions/58128248/how-can-i-resolve-the-error-url-scheme-must-be-http-or-https-for-cors-reque
-fetch('/src/data/customers.json')
+fetch('./data/customers.json')
     .then((res) => res.json())
     .then((json) => {
         data = json;
